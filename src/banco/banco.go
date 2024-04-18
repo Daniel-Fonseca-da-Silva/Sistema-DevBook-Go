@@ -3,6 +3,8 @@ package banco
 import (
 	"api/src/config"
 	"database/sql"
+
+	_ "github.com/lib/pq"
 )
 
 func Conectar() (*sql.DB, error) {
@@ -15,4 +17,5 @@ func Conectar() (*sql.DB, error) {
 		return nil, erro
 	}
 	return db, nil
+
 }
